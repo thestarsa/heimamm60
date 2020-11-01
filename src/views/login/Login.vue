@@ -87,7 +87,7 @@
     <div class="right">
       <img src="@/assets/img/login_bg.png" alt="" />
     </div>
-    <registered></registered>
+    <registered ref="regres"></registered>
   </div>
 </template>
 
@@ -169,14 +169,15 @@ export default {
             type: "success",
           });
           // 跳转
-          this.$router.push("/lyont");
+          this.$router.push("/layout");
         } else {
           this.$message.error(res.message);
           this.validation1();
         }
       });
-    },Registered(){ //注册按钮触发
-
+    },Registered1(){ //注册按钮触发
+    console.log();
+           this.$refs.regres.Isshow= true
     }
   },
 };
